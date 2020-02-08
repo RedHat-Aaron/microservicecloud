@@ -1,0 +1,5 @@
+com/athena/springcloud/cfgbeans/ConfigBean.class
+com/athena/springcloud/DeptConsumer80_App.class
+com/athena/rule/MyRandomRule.class
+com/athena/springcloud/controller/DeptController_Consumer.class
+com/athena/rule/MySelfRule.class

@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: microservicecloud-config-dept-client #读取的配置文件名称
+      label: master
+      profile: test
+      uri: http://localhost:3344/

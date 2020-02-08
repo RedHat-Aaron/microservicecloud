@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: microservicecloud-config-eureka-client #要读取的配置文件的名称
+      profile: dev
+      label: master
+      uri: http://config-3344.com:3344 #要从哪个微服务去拉去配置

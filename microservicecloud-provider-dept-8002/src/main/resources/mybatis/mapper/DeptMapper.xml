@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"  >
+
+<mapper namespace="com.athena.springcloud.dao.DeptMapper">
+    <resultMap id="BaseResult" type="com.athena.springcloud.entity.Dept">
+            <id column="dept_no" property="deptNo" jdbcType="BIGINT"/>
+            <id column="d_name" property="dName" jdbcType="VARCHAR"/>
+            <id column="db_source" property="dbSource" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <insert id="addDept" parameterType="com.athena.springcloud.entity.Dept">
+        INSERT INTO dept(d_name,db_source)
+        VALUES(
+          #{dName,jdbcType=VARCHAR},
+          DATABASE()
+        )
+    </insert>
+
+    <select id="findById" resultMap="BaseResult" parameterType="long">
+        SELECT * FROM dept WHERE dept_no = #{deptNo,jdbcType=BIGINT}
+    </select>
+
+    <select id="findAll" resultMap="BaseResult" >
+        SELECT * FROM dept
+    </select>
+</mapper>

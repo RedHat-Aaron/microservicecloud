@@ -1,0 +1,4 @@
+com/athena/springcloud/interfaces/DeptClientService.class
+com/athena/springcloud/entity/Dept.class
+com/athena/springcloud/interfaces/DeptClientServiceFallbackFactory$1.class
+com/athena/springcloud/interfaces/DeptClientServiceFallbackFactory.class

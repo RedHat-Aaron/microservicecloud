@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: microservicecloud-config-eureka-client #这个名字一定要和bootstrap中的配置文件名称保持一致

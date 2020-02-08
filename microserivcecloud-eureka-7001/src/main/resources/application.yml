@@ -1,0 +1,30 @@
+#spring:
+#  application:
+#    name: eureka-server
+#server:
+#  port: 7001
+#eureka:
+#  instance:
+#    hostname: eureka7001.com   #eureka服务端的实例名称
+#    appname: eureka-server
+#  client:
+#    registerWithEureka: true #false表示不向注册中心注册自己
+#    fetchRegistry: true       #false表示自己就是注册中心，职责就是维护服务实例，并不需要去检索服务
+#    serverUrl:
+#      #与Eureka Server交互，查询服务和注册服务都需要依赖这个地址(单机写一个即可)
+#      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: eureka7001.com #eureka服务端的实例名称
+    appname: eureka-server
+  client:
+    service-url: #注意！！！！这里是service-url不是server-url
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+    fetch-registry: true #false表示不向注册中心注册自己
+    register-with-eureka: true #false表示自己就是注册中心，职责就是维护服务实例，并不需要去检索服务
+spring:
+  application:
+    name: eureka-server
